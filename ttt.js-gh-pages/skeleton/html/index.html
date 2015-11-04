@@ -6,13 +6,39 @@
     <link rel="stylesheet" type="text/css" href="../css/ttt.css">
   </head>
   <body>
+    <figure class="ttt-board" id="ttt-board1">
+      <h1>Tic Tac Toe</h1>
+
+      <ul class="ttt-board-grid group">
+
+      </ul>
+    </figure>
+
     <script src="../js/jquery-2.1.1.js"></script>
     <!-- Whackjobs at GithubPages don't understand symlinks... -->
     <script src="../../ttt-core-solution/ttt-core.js"></script>
     <script src="../js/ttt-view.js"></script>
 
     <script>
-      // Write your code here.
+      $(document).on("ready", function(e){
+        var $el = $(".ttt-board-grid");
+        var game = new TTT.Game();
+        a = new TTT.View(game, $el);
+
+        $("li").on("click", function(e){
+          // console.log(a.POSITIONS);
+          // console.log(a.POSITIONS[e.target.attributes.class.nodeValue]);
+          // a.bindEvents(e.target.attributes.class.nodeValue);
+          console.log($(e.target).attr("id"));
+          var $square = $(e.target);
+          a.bindEvents($square);
+        });
+
+
+
+
+      });
+
     </script>
   </body>
 </html>

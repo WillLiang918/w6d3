@@ -1,0 +1,114 @@
+body, figure, h1, ul, li, div {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+li  {
+  list-style: none;
+}
+
+body {
+  font-family: helvetica;
+}
+
+h1 {
+  font-size: 72px;
+  text-align: center;
+}
+
+figure {
+
+  margin: auto;
+  width: 800px;
+  display: block;
+}
+
+.tower-board-grid li {
+  display: block;
+  border-bottom: 5px solid black;
+  width: 240px;
+  height: 390px;
+  float: left;
+  margin: 10px;
+  position: relative;
+}
+
+.tower-board-grid li#selected {
+  border-bottom: 5px solid blue;
+
+}
+
+
+.tower-board-grid li:hover {
+
+  border-bottom: 5px solid red;
+
+}
+
+.tower-board-grid {
+}
+
+
+.tower-board-grid li > div{
+  width: 250px;
+  height: 130px;
+  display: block
+  position: relative;
+}
+
+div{
+  position: relative;
+}
+
+span {
+  display: none;
+}
+span.tower2 {
+  display: block;
+  width: 200px;
+  height: 100px;
+  background-color: grey;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0px;
+  right: calc(50% - 100px)
+}
+
+
+span.tower1 {
+  display: block;
+  width: 150px;
+  height: 100px;
+  background-color: grey;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0px;
+  right: calc(50% - 75px);
+}
+
+span.tower0 {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0px;
+  right: calc(50% - 50px)
+}

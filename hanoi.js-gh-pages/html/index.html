@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Towers of Hanoi</title>
+    <link rel="stylesheet" type="text/css" href="../css/hanoi.css">
+  </head>
+  <body>
+    <figure class="tower-board" id="tower-board1">
+      <h1>Towers of Hanoi</h1>
+
+      <div class="tower-board-grid group">
+        <ul class="group">
+          <li class="col0">
+            <div><span id="space2"></span></div>
+            <div><span id="space1"></span></div>
+            <div><span id="space0"></span></div>
+          </li>
+          <li class="col1">
+            <div><span id="space2"></span></div>
+            <div><span id="space1"></span></div>
+            <div><span id="space0"></span></div>
+          </li>
+          <li class="col2">
+            <div><span id="space2"></span></div>
+            <div><span id="space1"></span></div>
+            <div><span id="space0"></span></div>
+          </li>
+        </ul>
+      </div>
+    </figure>
+
+    <script src="../js/jquery-2.1.1.js"></script>
+    <!-- Whackjobs at GithubPages don't understand symlinks... -->
+    <script src="../hanoi-core-solution/hanoi-core.js"></script>
+    <script src="../js/hanoi-view.js"></script>
+    <script>
+      $(document).on("ready", function(e){
+        var $el = $(".tower-board-grid");
+        var game = new Hanoi.Game;
+        var view = new Hanoi.View(game, $el);
+        view.bindEvents();
+        view.renderBoard();
+
+      });
+
+    </script>
+  </body>
+</html>

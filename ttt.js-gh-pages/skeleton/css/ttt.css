@@ -1,0 +1,58 @@
+body, figure, h1, ul, li {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+li  {
+  list-style: none;
+}
+
+body {
+  font-family: helvetica;
+}
+
+.ttt-board {
+  border: 5px solid gold;
+}
+
+.ttt-board h1 {
+  font-size: 72px;
+  text-align: center;
+}
+
+.ttt-board-grid {
+  border: 5px solid gold;
+  width: 900px;
+  display: block;
+  margin: auto;
+}
+
+.ttt-board-grid li {
+  width: 290px;
+  height: 290px;
+  border: 5px solid black;
+  float: left;
+  background-color: grey;
+  font-size: 72px
+}
+
+.ttt-board-grid li:hover {
+  background-color: yellow;
+}
+
+li.marked {
+  background-color: white;
+}
